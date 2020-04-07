@@ -1,0 +1,129 @@
+\pdfminorversion=4
+\documentclass[]{article}
+
+%%%%%%%%%%%%%%%%%%%
+% Packages/Macros %
+%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb,latexsym,amsmath}     % Standard packages
+\usepackage[utf8]{inputenc}
+
+%%%%%%%%%%%
+% Margins %
+%%%%%%%%%%%
+\addtolength{\textwidth}{1.0in}
+\addtolength{\textheight}{1.00in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\topmargin}{-.50in}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theorem/Proof Environments %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{theorem}{Theorem}
+\newenvironment{proof}{\noindent{\bf Proof:}}{$\hfill \Box$ \vspace{10pt}}  
+
+
+%%%%%%%%%%%%
+% Document %
+%%%%%%%%%%%%
+\begin{document}
+
+16. Demuestre por inducción:
+$$1+2+3+....+ n = \frac{n(n+1)}{2}$$
+Caso base: n=1
+$$1 = \frac{1(1+1)}{2} = \frac{2}{2} = 1$$
+Paso Inductivo: Suponemos que la proposición es cierta para $n=k \in \mathbb{N}.$\\
+H.I:
+$$1+2+3+....+ k = \frac{k(k+1)}{2}$$
+P.D que la proposición es cierta para n=k+1
+$$1+2+3+....+ k + 1 = (1+2+3+...+k) + (k+1)$$
+$$=\frac{k(k+1)}{2}+k+1$$
+$$=\frac{k(k+1)+2(k+1)}{2}$$
+$$=\frac{(k+1)(k+2)}{2}$$
+$$=\frac{k+1[(k+1)+1]}{2}$$
+
+$\therefore Se\hspace{2mm}cumple\hspace{2mm}{\forall{n} \in \mathbb{N}}$}\\
+
+17. Demuestre por inducción:
+$$1^2+2^2+....+n^2=\frac{n(n+1)(2n+1)}{6}$$
+Caso base: n=1
+$$1^2=\frac{1(1+1)(2(1)+1)}{6}=\frac{1(2)(3)}{6}=\frac{6}{6}=1$$
+Paso Inductivo: Suponemos que la fórmula es válida para $n=k \in \mathbb{N}.$\\
+H.I:$$1^2+2^2+...+k^2=\frac{k(k+1)(2k+1)}{6}$$
+P.D. que la proposición es cierta para n=k+1
+$$1^2+2^2+...+k+1^2=(1^2+2^2+...+k^2)+(k+1)^2$$
+$$=\frac{k(k+1)(2k+1)}{6}+(k+1)^2$$
+$$=\frac{k(k+1)(2k+1)+6(k+1)^2}{6}$$
+$$=\frac{(k+1)[k(2k+1)+6(k+1)]}{6}$$
+$$=\frac{(k+1)(2k^2+7k+6)}{6}$$
+$$=\frac{(k+1)(k+2)(2k+3)}{6}$$
+$$=\frac{(k+1)[(k+1)+1][2(k+1)+1]}{6}$$
+$\therefore Se\hspace{2mm}cumple\hspace{2mm}{\forall{n} \in \mathbb{N}}$}\\
+
+18. Encuentre una fórmula para la siguiente suma, luego 
+demuestre dicha fórmula por inducción:
+$$1+3+5+7+....+2n-1$$
+Fórmula: La suma de n primeros números impares consecutivos es $n^2$, es decir:\\
+$$1+3+5+7+....+2n-1=n^2$$
+Caso base: (Abarcaremos un par de casos)\\
+a) n=1\\
+$2(1)-1=1^2$ (Primer número de impar)\\
+$1=1$\\
+b) n=2\\
+$1+2(2)-1=2^2$ (Se suma el primer número consecutivo, por eso el resultado es 4)\\
+$4=4$\\
+Paso Inductivo: Suponemos que la fórmula es válida para $n=k \in \mathbb{N}.$\\
+H.I 
+$$1+3+5+7+....+2k-1=k^2$$
+P.D. Suponemos que la fórmula es válida para $n=k \in \mathbb{N}.$\\
+$$1+3+5+7+....+2(k-1)+(2(k+1)-1)=(k+1)^2$$
+$$1+3+5+7+....+2(k-1)+(2(k+1)-1)=k^2+(2(k+1)-1)$$
+$$=k^2+2k+2-1$$
+$$=k^2+2k+1$$
+$$=(k+1)^2$$
+$\therefore Se\hspace{2mm}cumple\hspace{2mm}{\forall{n} \in \mathbb{N}}$}\\
+
+19.	Mismas instrucciones que antes para:
+$$1^2+3^2+5^2+....+(2n-1)^2$$
+Fórmula:
+$$1^2+3^2+5^2+....+(2n-1)^2 = \frac{n(2n-1)(2n+1)}{3}$$
+Caso base: n=1
+$$(2(1)-1)^2=\frac{1(2(1)-1)(2(1)+1)}{3}$$
+$$1=\frac{1(1)(3)}{3}$$
+$$1=1$$
+Paso Inductivo: Suponemos que la fórmula es válida para $n=k \in \mathbb{N}.$\\
+H.I
+$$1^2+3^2+5^2+....+(2k-1)^2 = \frac{k(2k-1)(2k+1)}{3}$$
+P.D que la proposición es cierta para n=k+1
+$$1^2+3^2+5^2+....+(2k-1)^2+(2k+1)^2= \frac{k(2k-1)(2k+1)}{3}+(2k+1)^2$$
+Podemos ver que hay un factor común en ambos términos $((2k+1) y (2k+1)^2)$, así que lo extraemos
+$$=(2k+1)[\frac{k(2k-1)}{3}+2k+1]$$
+$$=(2k+1)[\frac{k(2k-1)+3(2k+1)}{3}]$$
+$$=(2k+1)[\frac{2k^2-k+6k+3}{3}]$$
+$$=(2k+1)[\frac{2k^2+5k+3}{3}$$
+Factorizamos el trinomio
+$$=\frac{(2k+1)(2k+3)(k+1)}{3}$$
+$\therefore Se\hspace{2mm}cumple\hspace{2mm}{\forall{n} \in \mathbb{N}}$}\\
+
+20. Demuestre por inducción:
+$$1+r+r^2+r^3+...+r^n=\frac{1-r^{n+1}}{1-r}$$
+Caso base: n=1\\
+El primer sumando del primer miembro es 1 el último es $r^1$, así tenemos\\
+$$1+r$$ 
+El segundo miembro queda $$\frac{1-r^2}{1-r}=\frac{(1+r)(1-r)}{1-r}$$
+entonces $$1+r=1+r$$ 
+Se cumple para $n=1$\\
+
+Paso Inductivo: Suponemos que la fórmula es válida para $n=k \in \mathbb{N}.$\\
+H.I
+$$1+r+r^2+r^3+...+r^k=\frac{1-r^{k+1}}{1-r}$$
+P.D. que la proposición es cierta para n=k+1
+$$1+r+r^2+r^3+...+r^k+r^{k+1}=\frac{1-r^{k+1}}{1-r}+r^{k+1}...Por H.I$$
+$$=\frac{1-r^{k+1}+r^{k+1}-r^{k+2}}{1-r}$$
+$$=\frac{1-r^{(k+1)+1}}{1-r}$$
+$\therefore Se\hspace{2mm}cumple\hspace{2mm}{\forall{n} \in \mathbb{N}}$}\\
+
+21.Pruebe que:
+
+\end{document}
