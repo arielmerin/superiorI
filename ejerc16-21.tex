@@ -1,27 +1,74 @@
-\pdfminorversion=4
-\documentclass[]{article}
-
-%%%%%%%%%%%%%%%%%%%
-% Packages/Macros %
-%%%%%%%%%%%%%%%%%%%
-\usepackage{amssymb,latexsym,amsmath}     % Standard packages
+\documentclass[letterpaper]{article}
 \usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{dsfont}
+\usepackage[margin=1.5cm,
+vmargin={1.5cm,1.3cm},
+includefoot]{geometry}
+\usepackage{setspace}
+\usepackage{subcaption}
+\usepackage{tocloft}
+\usepackage{upgreek}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{paralist}
+\usepackage{fancyhdr}
+\usepackage{lmodern}
+\usepackage{tcolorbox}
+\usepackage{color}
+\usepackage{tikz}
+\tcbuselibrary{skins,breakable}
+\pagestyle{fancy}
 
-%%%%%%%%%%%
-% Margins %
-%%%%%%%%%%%
-\addtolength{\textwidth}{1.0in}
-\addtolength{\textheight}{1.00in}
-\addtolength{\evensidemargin}{-0.75in}
-\addtolength{\oddsidemargin}{-0.75in}
-\addtolength{\topmargin}{-.50in}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
 
+\providecommand{\abs}[1]{\left|#1\right|}
+\providecommand{\norm}[1]{\left|\left|#1\right|\right|}														  
+\newcommand{\V}{\mathds{V}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Theorem/Proof Environments %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newtheorem{theorem}{Theorem}
-\newenvironment{proof}{\noindent{\bf Proof:}}{$\hfill \Box$ \vspace{10pt}}  
+\newcommand{\W}{\mathds{W}}
+
+\newcommand{\F}{\mathds{F}}
+
+\newcommand{\tq}{ \quad \cdot  \backepsilon \cdot \quad }
+
+\newcommand{\ld}{\lim\limits_{x \to 0^{+}}}
+
+\newcommand{\li}{\lim\limits_{x \to 0^{-}}}
+
+\newcommand{\la}{\lim\limits_{x \to a}}
+
+\newcommand{\R}{\mathds{R}}
+
+\newcommand{\Po}{\mathds{P}_2(\mathds{R})}
+
+\renewcommand{\*}{\cdot}
+
+\newcommand{\Iden}{\begin{pmatrix}
+		1 & 0 & 0\\
+		0 & 1 & 0\\
+		0 & 0 & 1 
+\end{pmatrix}}
+\newcommand{\T}{\begin{pmatrix}
+		1 & 3 & 9 \\
+		1 & 3 & 4 \\
+		0 & 0 & 2 
+\end{pmatrix} }
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{#1}}
+\makeatother
+
+\newtheorem{theorem}{Teorema}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definición}
 
 
 %%%%%%%%%%%%
@@ -29,7 +76,30 @@
 %%%%%%%%%%%%
 \begin{document}
 
-16. Demuestre por inducción:
+	\setlength{\unitlength}{1cm}
+\thispagestyle{empty}
+\begin{picture}(19,3)
+\put(-0.5,1.2){\includegraphics[scale=.20]{unam1.png}}
+\put(16,1){\includegraphics[scale=.29]{fciencias1.png}}
+\end{picture}
+
+\begin{center}
+	\vspace{-114pt}
+	\textbf{\large Álgebra Superior I}\\
+	\textbf{ Semestre 2020-2}\\
+	Prof. Alejandro Dorantes Aldama\\
+	Ayud. Elmer Enrique Tovar Acosta \\
+	Ayud. Alejandro Ríos Herrejón \\
+	\textbf{Tarea II}
+\rule{19cm}{0.3mm}
+	Carlos Andrade Hernández \hspace{2cm} Berenice \hspace{2cm} Carlos Uriel Sánchez Martínez \\
+	\begin{center}
+	Edgar Samuel Palacios Crispín \hspace{2cm} Kevin Ariel Merino Peña
+	\end{center}
+\end{center}
+
+
+\noindent16. Demuestre por inducción:
 $$1+2+3+....+ n = \frac{n(n+1)}{2}$$
 Caso base: n=1
 $$1 = \frac{1(1+1)}{2} = \frac{2}{2} = 1$$
@@ -38,30 +108,39 @@ H.I:
 $$1+2+3+....+ k = \frac{k(k+1)}{2}$$
 P.D que la proposición es cierta para n=k+1
 $$1+2+3+....+ k + 1 = (1+2+3+...+k) + (k+1)$$
-$$=\frac{k(k+1)}{2}+k+1$$
-$$=\frac{k(k+1)+2(k+1)}{2}$$
-$$=\frac{(k+1)(k+2)}{2}$$
-$$=\frac{k+1[(k+1)+1]}{2}$$
+\begin{align*}
+	&=\frac{k(k+1)}{2}+k+1\\
+	&=\frac{k(k+1)+2(k+1)}{2}\\
+	&=\frac{(k+1)(k+2)}{2}\\
+	&=\frac{k+1[(k+1)+1]}{2}
+\end{align*}
 
-$\therefore Se\hspace{2mm}cumple\hspace{2mm}{\forall{n} \in \mathbb{N}}$}\\
+\begin{center}
+$\therefore$ Se cumple  $\forall{n} \in \mathbb{N}$
+\end{center}
 
-17. Demuestre por inducción:
+\noindent17. Demuestre por inducción:
 $$1^2+2^2+....+n^2=\frac{n(n+1)(2n+1)}{6}$$
 Caso base: n=1
 $$1^2=\frac{1(1+1)(2(1)+1)}{6}=\frac{1(2)(3)}{6}=\frac{6}{6}=1$$
 Paso Inductivo: Suponemos que la fórmula es válida para $n=k \in \mathbb{N}.$\\
 H.I:$$1^2+2^2+...+k^2=\frac{k(k+1)(2k+1)}{6}$$
 P.D. que la proposición es cierta para n=k+1
-$$1^2+2^2+...+k+1^2=(1^2+2^2+...+k^2)+(k+1)^2$$
-$$=\frac{k(k+1)(2k+1)}{6}+(k+1)^2$$
-$$=\frac{k(k+1)(2k+1)+6(k+1)^2}{6}$$
-$$=\frac{(k+1)[k(2k+1)+6(k+1)]}{6}$$
-$$=\frac{(k+1)(2k^2+7k+6)}{6}$$
-$$=\frac{(k+1)(k+2)(2k+3)}{6}$$
-$$=\frac{(k+1)[(k+1)+1][2(k+1)+1]}{6}$$
-$\therefore Se\hspace{2mm}cumple\hspace{2mm}{\forall{n} \in \mathbb{N}}$}\\
+$$ 1^2+2^2+...+k+1^2=(1^2+2^2+...+k^2)+(k+1)^2  $$
+\begin{align*}
+	&=\frac{k(k+1)(2k+1)}{6}+(k+1)^2\\
+	&=\frac{k(k+1)(2k+1)+6(k+1)^2}{6}\\
+	&=\frac{(k+1)[k(2k+1)+6(k+1)]}{6}\\
+	&=\frac{(k+1)(2k^2+7k+6)}{6}\\
+	&=\frac{(k+1)(k+2)(2k+3)}{6}\\
+	&=\frac{(k+1)[(k+1)+1][2(k+1)+1]}{6}
+\end{align*}
+\begin{center}
+	$\therefore$ Se  cumple $\forall{n} \in \mathbb{N}$	
+\end{center}
 
-18. Encuentre una fórmula para la siguiente suma, luego 
+
+\noindent18. Encuentre una fórmula para la siguiente suma, luego 
 demuestre dicha fórmula por inducción:
 $$1+3+5+7+....+2n-1$$
 Fórmula: La suma de n primeros números impares consecutivos es $n^2$, es decir:\\
@@ -77,36 +156,46 @@ Paso Inductivo: Suponemos que la fórmula es válida para $n=k \in \mathbb{N}.$\
 H.I 
 $$1+3+5+7+....+2k-1=k^2$$
 P.D. Suponemos que la fórmula es válida para $n=k \in \mathbb{N}.$\\
-$$1+3+5+7+....+2(k-1)+(2(k+1)-1)=(k+1)^2$$
-$$1+3+5+7+....+2(k-1)+(2(k+1)-1)=k^2+(2(k+1)-1)$$
-$$=k^2+2k+2-1$$
-$$=k^2+2k+1$$
-$$=(k+1)^2$$
-$\therefore Se\hspace{2mm}cumple\hspace{2mm}{\forall{n} \in \mathbb{N}}$}\\
+\begin{align*}
+	1+3+5+7+....+2(k-1)+(2(k+1)-1)&=(k+1)^2\\
+	1+3+5+7+....+2(k-1)+(2(k+1)-1)&=k^2+(2(k+1)-1)\\
+	&=k^2+2k+2-1\\
+	&=k^2+2k+1\\
+	&=(k+1)^2\\
+\end{align*}
+\begin{center}
+	$\therefore$ Se cumple $\forall{n} \in \mathbb{N}$\\
+\end{center}
 
-19.	Mismas instrucciones que antes para:
+\noindent19.	Mismas instrucciones que antes para:
 $$1^2+3^2+5^2+....+(2n-1)^2$$
 Fórmula:
 $$1^2+3^2+5^2+....+(2n-1)^2 = \frac{n(2n-1)(2n+1)}{3}$$
 Caso base: n=1
-$$(2(1)-1)^2=\frac{1(2(1)-1)(2(1)+1)}{3}$$
-$$1=\frac{1(1)(3)}{3}$$
-$$1=1$$
+\begin{align*}
+	(2(1)-1)^2&=\frac{1(2(1)-1)(2(1)+1)}{3}\\
+	1&=\frac{1(1)(3)}{3}\\
+	1&=1
+\end{align*}
 Paso Inductivo: Suponemos que la fórmula es válida para $n=k \in \mathbb{N}.$\\
 H.I
 $$1^2+3^2+5^2+....+(2k-1)^2 = \frac{k(2k-1)(2k+1)}{3}$$
 P.D que la proposición es cierta para n=k+1
 $$1^2+3^2+5^2+....+(2k-1)^2+(2k+1)^2= \frac{k(2k-1)(2k+1)}{3}+(2k+1)^2$$
 Podemos ver que hay un factor común en ambos términos $((2k+1) y (2k+1)^2)$, así que lo extraemos
-$$=(2k+1)[\frac{k(2k-1)}{3}+2k+1]$$
-$$=(2k+1)[\frac{k(2k-1)+3(2k+1)}{3}]$$
-$$=(2k+1)[\frac{2k^2-k+6k+3}{3}]$$
-$$=(2k+1)[\frac{2k^2+5k+3}{3}$$
+\begin{align*}
+	&=(2k+1)[\frac{k(2k-1)}{3}+2k+1]\\
+	&=(2k+1)[\frac{k(2k-1)+3(2k+1)}{3}]\\
+	&=(2k+1)[\frac{2k^2-k+6k+3}{3}]\\
+	&=(2k+1)[\frac{2k^2+5k+3}{3}]\\
+\end{align*}
 Factorizamos el trinomio
 $$=\frac{(2k+1)(2k+3)(k+1)}{3}$$
-$\therefore Se\hspace{2mm}cumple\hspace{2mm}{\forall{n} \in \mathbb{N}}$}\\
+\begin{center}
+	$\therefore$ Se cumple $\forall{n} \in \mathbb{N}$\\
+\end{center}
 
-20. Demuestre por inducción:
+\noindent20. Demuestre por inducción:
 $$1+r+r^2+r^3+...+r^n=\frac{1-r^{n+1}}{1-r}$$
 Caso base: n=1\\
 El primer sumando del primer miembro es 1 el último es $r^1$, así tenemos\\
@@ -119,10 +208,14 @@ Paso Inductivo: Suponemos que la fórmula es válida para $n=k \in \mathbb{N}.$\
 H.I
 $$1+r+r^2+r^3+...+r^k=\frac{1-r^{k+1}}{1-r}$$
 P.D. que la proposición es cierta para n=k+1
-$$1+r+r^2+r^3+...+r^k+r^{k+1}=\frac{1-r^{k+1}}{1-r}+r^{k+1}...Por H.I$$
-$$=\frac{1-r^{k+1}+r^{k+1}-r^{k+2}}{1-r}$$
-$$=\frac{1-r^{(k+1)+1}}{1-r}$$
-$\therefore Se\hspace{2mm}cumple\hspace{2mm}{\forall{n} \in \mathbb{N}}$}\\
+\begin{align*}
+	1+r+r^2+r^3+...+r^k+r^{k+1}&=\frac{1-r^{k+1}}{1-r}+r^{k+1}...Por H.I\\
+	&=\frac{1-r^{k+1}+r^{k+1}-r^{k+2}}{1-r}\\
+	&=\frac{1-r^{(k+1)+1}}{1-r}\\
+\end{align*}
+\begin{center}
+	$\therefore$ Se  cumple  $\forall{n} \in \mathbb{N}$\\
+\end{center}
 
 21.Pruebe que:
 
