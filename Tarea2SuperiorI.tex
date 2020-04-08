@@ -28,12 +28,6 @@ includefoot]{geometry}
 
 \providecommand{\abs}[1]{\left|#1\right|}
 \providecommand{\norm}[1]{\left|\left|#1\right|\right|}														  
-\newcommand{\V}{\mathds{V}}
-
-\newcommand{\W}{\mathds{W}}
-
-\newcommand{\F}{\mathds{F}}
-
 \newcommand{\tq}{ \quad \cdot  \backepsilon \cdot \quad }
 
 \newcommand{\ld}{\lim\limits_{x \to 0^{+}}}
@@ -44,20 +38,15 @@ includefoot]{geometry}
 
 \newcommand{\R}{\mathds{R}}
 
+\newcommand{\Z}{\mathds{Z}}
+
+\newcommand{\N}{\mathds{N}}
+
+\renewcommand{\P}{\mathcal{P}}
+
 \newcommand{\Po}{\mathds{P}_2(\mathds{R})}
 
 \renewcommand{\*}{\cdot}
-
-\newcommand{\Iden}{\begin{pmatrix}
-		1 & 0 & 0\\
-		0 & 1 & 0\\
-		0 & 0 & 1 
-\end{pmatrix}}
-\newcommand{\T}{\begin{pmatrix}
-		1 & 3 & 9 \\
-		1 & 3 & 4 \\
-		0 & 0 & 2 
-\end{pmatrix} }
 
 \makeatletter
 \renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
@@ -70,13 +59,8 @@ includefoot]{geometry}
 \theoremstyle{definition}
 \newtheorem{definition}{Definición}
 
-
-%%%%%%%%%%%%
-% Document %
-%%%%%%%%%%%%
 \begin{document}
-
-	\setlength{\unitlength}{1cm}
+\setlength{\unitlength}{1cm}
 \thispagestyle{empty}
 \begin{picture}(19,3)
 \put(-0.5,1.2){\includegraphics[scale=.20]{unam1.png}}
@@ -96,9 +80,58 @@ includefoot]{geometry}
 	\begin{center}
 	Edgar Samuel Palacios Crispín \hspace{2cm} Kevin Ariel Merino Peña
 	\end{center}
+	\vspace{-14pt}
+\rule{19cm}{0.3mm}
+\end{center}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %			|	EJERCICIO 3					%
+ %			|	ARIEL						%	
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent3. Demuestre que toda función $ f: \R \to \R $ lineal 
+\[ f(x) = ax +b \]
+Es biyectiva siempre que $ a \neq 0 $\\
+
+Además, si $ g(x) = cx + d $ es otra función lineal, demuestre que \[f = g\] si y solamente si $a = c $, $ b = d $ si y solamente si \[ f(0) = g(0) \qquad \text{ y } \qquad f(1) = g(1) \]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			|	EJERCICIO 7					%
+%			|	ARIEL						%	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent7. Sea $ X $ un conjunto. Demuestre que no hay una biyección entre $ X $ y $ \P(X) $ terminando el siguiente argumento:
+\begin{center}
+\parbox[b][3cm][c]{0.7\textwidth}{Supongamos que existe dicha biyección, digamos $ f: X \to \P(X) $. Dado $ x \in X $, dado que $ f(x) \subseteq X $ tiene sentido preguntarnos ¿$ x \in f(x) $? denote por $ A $ al conjunto de los puntos que no cumplen esto, es decir,
+\[ A = \{ x \in X | x \notin f(x) \} \]
+Ahora, como $ A \subseteq X $ y $ f $ es biyectiva $ y = f^{-1}(A) \in X $. Entonces ¿$ y \in A $ o $ y \notin A $ ? 
+}
 \end{center}
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			|	EJERCICIO 11				%
+%			|	ARIEL						%	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent11.Demuestre que no ha una biyección entre $ \N $ y $ \R $. \textit{Sugerencia: Los ejercicios anteriores pueden servir}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			|	EJERCICIO 15				%
+%			|	ARIEL						%	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent15.Diga si las siguientes son particiones de los conjuntos dados y si lo son, diga cuáles son las relaciones de equivalencia inducidad, justificando bien sus respuestas
+\begin{itemize}
+	\item  En $ \Z $, sea $ P = \{ \{ n \in \Z : \exists m \in \Z(n = 3m) \}, \{ n \in \Z : \exists m \in \Z(n = 3m+1 \}, \{ n \in \Z : \exists m \in \Z(n = 3m + 2)  \} \}$
+	\item En $  \Z $, sea $ P = \{ \{ n \in \Z :n \leq 0 \}, \{ n \in \Z: n > 1 \} \}  $
+	\item En el conjunto $ A= \{1,2,3,4,5,6 \} $, sea $ P = \{ \{ 1,2\},\{3,4,5,6 \},\{6 \} \} $
+	\item En el conjunto $ A= \{1,2,3,4,5,6 \} $, sea $ P = \{ \{ 1,2\},\{3,4,6 \},\{5 \} \} $
+	\item En $ \R $, sea $ P = \{ \{ x \in \R: x \leq 0 \land x \text{ es irracional } \},\{x \in \R: x \leq 0 \land x \text{ es racional} \},\{x \in \R: x>0 \},\{x \in \R: x \text{ es irracional } \land x \text{ es racional } \}  \} $ 
+	\item En $ \R $ sea $ P = \{  \{ x \in \R: x \leq 0 \land x \text{ es irracional} \},\{ x \in \R : x \leq0 \land x \text{ es racional} \},\{ x \in \R: x > 0 \}  \} $
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			|	EJERCICIO 16				%
+%			|	BERE						%	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent16. Demuestre por inducción:
 $$1+2+3+....+ n = \frac{n(n+1)}{2}$$
 Caso base: n=1
@@ -118,7 +151,10 @@ $$1+2+3+....+ k + 1 = (1+2+3+...+k) + (k+1)$$
 \begin{center}
 $\therefore$ Se cumple  $\forall{n} \in \mathbb{N}$
 \end{center}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			|	EJERCICIO 17				%
+%			|	BERE						%	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent17. Demuestre por inducción:
 $$1^2+2^2+....+n^2=\frac{n(n+1)(2n+1)}{6}$$
 Caso base: n=1
@@ -139,7 +175,10 @@ $$ 1^2+2^2+...+k+1^2=(1^2+2^2+...+k^2)+(k+1)^2  $$
 	$\therefore$ Se  cumple $\forall{n} \in \mathbb{N}$	
 \end{center}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			|	EJERCICIO 18				%
+%			|	BERE						%	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent18. Encuentre una fórmula para la siguiente suma, luego 
 demuestre dicha fórmula por inducción:
 $$1+3+5+7+....+2n-1$$
@@ -167,6 +206,10 @@ P.D. Suponemos que la fórmula es válida para $n=k \in \mathbb{N}.$\\
 	$\therefore$ Se cumple $\forall{n} \in \mathbb{N}$\\
 \end{center}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			|	EJERCICIO 19				%
+%			|	BERE						%	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent19.	Mismas instrucciones que antes para:
 $$1^2+3^2+5^2+....+(2n-1)^2$$
 Fórmula:
@@ -195,6 +238,10 @@ $$=\frac{(2k+1)(2k+3)(k+1)}{3}$$
 	$\therefore$ Se cumple $\forall{n} \in \mathbb{N}$\\
 \end{center}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			|	EJERCICIO 20				%
+%			|	BERE						%	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent20. Demuestre por inducción:
 $$1+r+r^2+r^3+...+r^n=\frac{1-r^{n+1}}{1-r}$$
 Caso base: n=1\\
@@ -217,6 +264,13 @@ P.D. que la proposición es cierta para n=k+1
 	$\therefore$ Se  cumple  $\forall{n} \in \mathbb{N}$\\
 \end{center}
 
-21.Pruebe que:
+\noindent21.Pruebe que:
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			|	EJERCICIO 23				%
+%			|	ARIEL						%	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent23. Dado $ A \subseteq \N $, decimos que $ x \in A $ es el máximo de $ A $ si para todo $ y \in A $, se cumple $ y \leq x $. Demuestree que todo subconjunto finito de números naturales tiene máximo usando inducción sobre la cardinalidad del conjunto.
 
 \end{document}
