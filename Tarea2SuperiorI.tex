@@ -75,12 +75,11 @@ includefoot]{geometry}
 	Ayud. Elmer Enrique Tovar Acosta \\
 	Ayud. Alejandro Ríos Herrejón \\
 	\textbf{Tarea II}
-\rule{19cm}{0.3mm}
+\rule{19cm}{0.2mm}
 	\begin{center}
 Kevin Ariel Merino Peña
 	\end{center}
-	\vspace{-14pt}
-\rule{19cm}{-0.3mm}
+\rule{19cm}{0.2mm}
 \end{center}
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  %			|	EJERCICIO 3					%
@@ -90,9 +89,66 @@ Kevin Ariel Merino Peña
 \[ f(x) = ax +b \]
 Es biyectiva siempre que $ a \neq 0 $\\
 
-Además, si $ g(x) = cx + d $ es otra función lineal, demuestre que \[f = g\] si y solamente si $a = c $, $ b = d $ si y solamente si \[ f(0) = g(0) \qquad \text{ y } \qquad f(1) = g(1) \]
-
-
+Sean $ f(x) $ y $ f(z)  \in \R$ entonces,
+\begin{align*}
+	f(x) &= f(z) &&\text{ Tomemos estas dos imágenes }\\
+	ax +b &= az + b &&\text{ Por la regla de correspondencia de } f\\
+	ax &= az &&\text{ Sumando el inverso aditivo de b en ambos miembros}\\
+	x &= z &&\text{ porque } a \neq 0
+\end{align*}
+\begin{center}
+	$ \therefore f $ es inyectiva
+\end{center}
+Luego, sea $ x \in \R $
+\begin{align*}
+	x &= r + b &&\text{ Esto puede ocurrir para todo número real, con }r, b \in \R \\
+	x &= rn + b &&\text{ Además podemos ver a cualquier real como el producto de dos reales }n \in \R \\
+\end{align*}
+\begin{center}
+	$ \therefore x \in Img(f)  \implies \R \subseteq Img(f)$\\
+	La otra contención está dada por definición de la imagen de una función\\
+	$ \therefore \quad Img(f) = \R  \implies f$ es suprayectiva.\\
+	$ \therefore f $ es biyectiva.
+\end{center}
+Además, si $ g(x) = cx + d $ es otra función lineal, demuestre que \[f = g\] si y sólo si $a = c $, $ b = d $ si y sólo si \[ f(0) = g(0) \qquad \text{ y } \qquad f(1) = g(1) \]
+$ \implies_1 $
+\begin{align*}
+	f(0) = g(0) \implies a(0) + b &= c(0) + d && \text{ Por regla de correspondecia de } f, g\\
+	b &= d && \text{ Porque } a\* 0 = 0 \forall a \in \R 
+\end{align*}
+\begin{align*}
+	f(1) = g(1) \implies a(1) + b &= c(1) + d && \text{ Por regla de correspondecia de } f, g\\
+	 a + b &=c + d && \text{ Porque } x\* 1 = 0 \forall x \in \R \\
+	 a + b &=c + b && \text{ Porque de lo anterior dedcimos que } b = d \\
+	 a &=c && \text{ Sumando en ambos miembros el inverso aditivo de  } b  
+\end{align*}
+$ \impliedby_1 $
+\begin{align*}
+	a &= c &&\text{Por hipótesis}\\
+	ax &= cx &&\text{multiplicando ambos miembros por } x\\
+	ax + b &= cx + d&&\text{Pues por hipótesis } b = d\\
+	a(1) + b &= c(1) + d&&\text{Sustituyendo } x = 1\\
+	a(0) + b &= c(0) + d&&\text{Evalando en } x = 0
+\end{align*}
+De lo anterior tenemos que 
+\[ a = c \land b = d \iff f(0) = g(0) \land f(1) = g(1) \]
+$ \implies_2 $
+\begin{align*}
+	f = g \implies f (1) &= a(1) + b &&\text{Por regla de corespondencia de} f \\
+	 &= c(1) + d &&\text{por la regla de correspondencia de }g \\
+	 &= g(1) &&\text{pues suponemos que } f = g \\ \\
+	f = g \implies f (0) &= a(0) + b &&\text{Por regla de corespondencia de} f \\
+	 &= b &&\text{ por propiedades de los reales} \\
+	 &= c (0) + d &&\text{por la regla de correspondencia de }g \\
+	 &= g(0) &&\text{pues suponemos que } f = g 
+\end{align*}
+$ \impliedby_2 $ (Emplearemos la transitividad de $ \iff $)
+\begin{align*}
+	a = c \land b = d \implies f(x) &= a(x) + b \text{Por regla de correspondencia de } f\\
+	\implies &= c(x) + d \text{Sutituyendo lo que estamos suponiendo }\\
+	\implies &= g(x) \text{Por la regla de correspondencia de } g
+\end{align*}
+$$ \therefore \quad f = g \iff a = c \land b = d \iff f(0) = g(0) \land f(1) = g(1)  $$
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
