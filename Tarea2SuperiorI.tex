@@ -77,7 +77,7 @@ includefoot]{geometry}
 	\textbf{Tarea II}
 \rule{19cm}{0.2mm}
 	\begin{center}
-Kevin Ariel Merino Peña
+Kevin Ariel Merino Peña\footnote[2]{Número de cuenta: 317031326}
 	\end{center}
 \rule{19cm}{0.2mm}
 \end{center}
@@ -155,9 +155,42 @@ $$ \therefore \quad f = g \iff a = c \land b = d \iff f(0) = g(0) \land f(1) = g
 %			|	EJERCICIO 8 				%
 %			|	ARIEL						%	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
 \noindent8. Sea $ X = \{ f: \N \to \{1,0\} \mid f \text{ es función } \}  $. Dé una biyeccióń entre $ X $ y $ \P(\N) $\\
+Sea $ g \in X $ y supongamos que $$ g (x) = \begin{cases}
+1, \text{ si } x = 1,2,3,7\\
+0, \text{ en cualquier otro caso}
+\end{cases} $$
+entonces sea $ \gamma $ una relación de $ X $ en $ \P(\N) $ dada por:
+\[ (h,A) \in \gamma \iff A = \{ x \in \N \mid h(x) = 1 \}  \]
+Sea $ r \in X $, proponemos $ S \in \P(\N) $ como $ S = \{ x\in  \N \mid r(x) = 1 \} $ entonces $ (r,S) \in \gamma $ y como $ r $ es arbitrario entonces $ Dom(\gamma) = X $.\\
 
 
+Sea $ t \in X  $ y sean $ S, W \in \P(\N)$ supongamos que $ (r,s), (r,w) \in \gamma $ \textit{i.e. } $ S = \{ x \in \N \mid r(x) = 1 \} $ y 
+$ W= \{ x \in \N \mid r(x) = 1 \} $, es claro que sus elementos son los mismos, por lo tanto $ S = W $
+
+\begin{center}
+	$ \therefore \quad \gamma $ es función.
+\end{center}
+Así, tenemos $ \gamma: X \to \P(\N) $, $ \gamma(v) =  A $ donde $ A = \{ x \in \N \mid v(x) = 1 \} $.\\
+
+Sean $ v(z), v(w) \in \P(\N) $.
+\begin{align*}
+	\gamma(z) &= \gamma(w) &&\text{Supongamos esto}\\
+	\{ x \in \N \mid z(x) = 1 \} &= \{ x \in \N \mid w(x) = 1 \} &&\text{Por la regla de correspondencia de } \gamma\\
+	z &= w &&\text{Por la elección del conjunto de funciones}
+\end{align*}
+\begin{center}
+	$ \therefore \quad \gamma $ es inyectiva
+\end{center}
+Observemos que $ Img(\gamma) \subseteq \P(\N) $ por definición de imagen.\\
+Sea $ Q \in \P(\N)  $, proponemos $ f \in X \tq Img(f) = V$, entonces $ V \in Img(\gamma) $
+\begin{center}
+	$ \therefore \quad \P(\N) \subseteq Img(\gamma) $\\
+	$ \therefore \quad \gamma$ es suprayectiva\\
+	$ \therefore \quad \gamma$ es biyectiva
+\end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %			|	EJERCICIO 12				%
 %			|	ARIEL						%	
@@ -189,15 +222,17 @@ $ Y \sim X $.
 %			|	EJERCICIO 20				%
 %			|	Ariel						%	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent20. Demuestre por inducción:
+\newpage\noindent20. Demuestre por inducción:
 $$1+r+r^2+r^3+...+r^n=\frac{1-r^{n+1}}{1-r}$$
 \begin{flushright}
 	\textbf{Caso base} 
 \end{flushright}
-$ n=1 $, El primer sumando del primer miembro es 1 el último es $r^1$, así tenemos\\
-$$1+r$$ 
-El segundo miembro de la igualdad, queda $$\frac{1-r^2}{1-r}=\frac{(1+r)(1-r)}{1-r}$$
-entonces $$1+r=1+r$$ 
+$ n=1 $, El primer sumando del primer miembro es 1 el último es $r^1$, así tenemos:
+\begin{align*}
+	1 + r & = \dfrac{1-r^2}{1-r}\\
+	1 + r & = \frac{(1+r)(1-r)}{1-r}\\
+	1 + r & = 1+r\\
+\end{align*}
 \begin{center}
 	$ \therefore $  Se cumple para $n=1$
 \end{center}
@@ -226,7 +261,9 @@ P.d. Se cumple para $ n=n+1 $
 %			|	EJERCICIO 24				%
 %			|	ARIEL						%	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent Dado $ A \subseteq \N $, decimos que $ x \in A $ es el máximo de $ A $ si para todo $ y \in A $, se cumple $ y \leq x $. Demuestree que todo subconjunto finito de números naturales tiene máximo usando inducción sobre la cardinalidad del conjunto.
+\noindent Dado $ A \subseteq \N $, decimos que $ x \in A $ es el máximo de $ A $ si para todo $ y \in A $, se cumple $ y \leq x $. Demuestree que todo subconjunto finito de números naturales tiene máximo usando inducción sobre la cardinalidad del conjunto.\\
+
+
 
 \noindent24. Usando el ejercicio anterior, demuestre que $ \N $ no es finito.\\
 
