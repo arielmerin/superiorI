@@ -138,15 +138,15 @@ $ \implies_2 $
 	 &= c(1) + d &&\text{por la regla de correspondencia de }g \\
 	 &= g(1) &&\text{pues suponemos que } f = g \\ \\
 	f = g \implies f (0) &= a(0) + b &&\text{Por regla de corespondencia de} f \\
-	 &= b &&\text{ por propiedades de los reales} \\
+	 &= b &&\text{Por propiedades de los reales} \\
 	 &= c (0) + d &&\text{por la regla de correspondencia de }g \\
 	 &= g(0) &&\text{pues suponemos que } f = g 
 \end{align*}
 $ \impliedby_2 $ (Emplearemos la transitividad de $ \iff $)
 \begin{align*}
-	a = c \land b = d \implies f(x) &= a(x) + b \text{Por regla de correspondencia de } f\\
-	\implies &= c(x) + d \text{Sutituyendo lo que estamos suponiendo }\\
-	\implies &= g(x) \text{Por la regla de correspondencia de } g
+	a = c \land b = d \implies f(x) &= a(x) + b &&\text{Por regla de correspondencia de } f\\
+	\implies &= c(x) + d &&\text{Sutituyendo lo que estamos suponiendo }\\
+	\implies &= g(x) &&\text{Por la regla de correspondencia de } g
 \end{align*}
 $$ \therefore \quad f = g \iff a = c \land b = d \iff f(0) = g(0) \land f(1) = g(1)  $$
 
@@ -164,9 +164,27 @@ $$ \therefore \quad f = g \iff a = c \land b = d \iff f(0) = g(0) \land f(1) = g
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent12. Sea $ X $ un conjunto. Defina una relación $ R $ en $ \P(\N) $ como sigue
 \[ (U,V) \in R \iff \abs{U} = \abs{V} \]
-Demuestre que $ R $ es reflexiva, transitiva y simétrica.\\
-
-
+Demuestre que $ R $ es reflexiva, transitiva y simétrica. (emplearemos $ \sim $ para denotar que dos elementos están relacionados)\\
+Sea $ X \in \P(\N)$, como $ \abs{X} = \abs{X} $, entonces
+\[ X \sim X  \]
+\begin{center}
+	y como $ X $ es arbitrario, $\therefore \forall X \in \P(\N) \quad X \sim X  $\\
+	$ \therefore \quad R $ es reflexiva
+\end{center}
+Sean $ X, Y, Z \in \P(\N) $
+Supongamos $ X \sim Y $ y $ Y \sim Z $, lo anterior es $ \abs{X} = \abs{Y} $ y $ \abs{Y} = \abs{Z} $, como $ = $ es una relación binaria transitiva, entonces $ \abs{X} = \abs{Z} $ \textit{i.e. } $ X \sim Z $ 
+\begin{center}
+	y como $ X,Y, Z $ son arbitrarios, $\therefore \forall X, Y,Z \in \P(\N) \quad X \sim Y \land Y \sim  Z \implies X \sim Z  $\\
+	$ \therefore \quad R $ es transitiva.
+\end{center}
+Sean $ X,Y \in \P(\N)$
+supongamos $ X \sim Y $ entonces $ \abs{X} = \abs{Y} $ y como $ = $ es una relación simétrica, entonces $ \abs{Y} = \abs{X} $ \textit{i.e. }
+$ Y \sim X $.
+\begin{center}
+	y como $ X,Y $ son arbitrarios, $\therefore \forall X, Y \in \P(\N) \quad X \sim Y  \implies Y \sim X  $\\
+	$ \therefore \quad R $ es simétrica.\\
+	(entonces es relación de equivalencia)
+\end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %			|	EJERCICIO 20				%
 %			|	Ariel						%	
