@@ -154,6 +154,11 @@ P.d. Se cumple para $ n=n+1 $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent Dado $ A \subseteq \N $, decimos que $ x \in A $ es el máximo de $ A $ si para todo $ y \in A $, se cumple $ y \leq x $. Demuestree que todo subconjunto finito de números naturales tiene máximo usando inducción sobre la cardinalidad del conjunto.
 
-\noindent24. Usando el ejercicio anterior, demuestre que $ \N $ no es finito.
+\noindent24. Usando el ejercicio anterior, demuestre que $ \N $ no es finito.\\
 
+Procederemos por contradicción, suponiendo que $ \N $ es finito, entonces por el ejercicio anterior podemos hallar un máximo. \\
+Sea $ x  $ el elemento máximo, entonces se cumple que $$ \forall y \in \N , \quad y \leq x $$ Ahora veamos al sucesor de $ x $, pues por un axioma de \textit{Peano} sabemos todos los elementos de $ \N $ tienen un sucesor, así que $$ \exists x + 1 \in \N $$luego $$ x \leq x+1 !$$ entonces $ x $ ya no sería elemento máximo, esta contradicción vino de suponer que $ \N $ es finito
+\begin{center}
+	$ \therefore \quad \N$  tiene una cantidad infinita de elementos.
+\end{center}
 \end{document}
