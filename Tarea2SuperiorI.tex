@@ -76,12 +76,11 @@ includefoot]{geometry}
 	Ayud. Alejandro Ríos Herrejón \\
 	\textbf{Tarea II}
 \rule{19cm}{0.3mm}
-	Carlos Andrade Hernández \hspace{2cm} Berenice SanJuan Hernández \hspace{2cm} Carlos Uriel Sánchez Martínez \\
 	\begin{center}
-	Edgar Samuel Palacios Crispín \hspace{2cm} Kevin Ariel Merino Peña
+Kevin Ariel Merino Peña
 	\end{center}
 	\vspace{-14pt}
-\rule{19cm}{0.3mm}
+\rule{19cm}{-0.3mm}
 \end{center}
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  %			|	EJERCICIO 3					%
@@ -93,184 +92,68 @@ Es biyectiva siempre que $ a \neq 0 $\\
 
 Además, si $ g(x) = cx + d $ es otra función lineal, demuestre que \[f = g\] si y solamente si $a = c $, $ b = d $ si y solamente si \[ f(0) = g(0) \qquad \text{ y } \qquad f(1) = g(1) \]
 
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			|	EJERCICIO 7					%
+%			|	EJERCICIO 8 				%
 %			|	ARIEL						%	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent7. Sea $ X $ un conjunto. Demuestre que no hay una biyección entre $ X $ y $ \P(X) $ terminando el siguiente argumento:
-\begin{center}
-\parbox[b][3cm][c]{0.7\textwidth}{Supongamos que existe dicha biyección, digamos $ f: X \to \P(X) $. Dado $ x \in X $, dado que $ f(x) \subseteq X $ tiene sentido preguntarnos ¿$ x \in f(x) $? denote por $ A $ al conjunto de los puntos que no cumplen esto, es decir,
-\[ A = \{ x \in X | x \notin f(x) \} \]
-Ahora, como $ A \subseteq X $ y $ f $ es biyectiva $ y = f^{-1}(A) \in X $. Entonces ¿$ y \in A $ o $ y \notin A $ ? 
-}
-\end{center}
-
+\noindent8. Sea $ X = \{ f: \N \to \{1,0\} \mid f \text{ es función } \}  $. Dé una biyeccióń entre $ X $ y $ \P(\N) $\\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			|	EJERCICIO 11				%
+%			|	EJERCICIO 12				%
 %			|	ARIEL						%	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent11.Demuestre que no ha una biyección entre $ \N $ y $ \R $. \textit{Sugerencia: Los ejercicios anteriores pueden servir}
+\noindent12. Sea $ X $ un conjunto. Defina una relación $ R $ en $ \P(\N) $ como sigue
+\[ (U,V) \in R \iff \abs{U} = \abs{V} \]
+Demuestre que $ R $ es reflexiva, transitiva y simétrica.\\
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			|	EJERCICIO 15				%
-%			|	ARIEL						%	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent15.Diga si las siguientes son particiones de los conjuntos dados y si lo son, diga cuáles son las relaciones de equivalencia inducidad, justificando bien sus respuestas
-\begin{itemize}
-	\item  En $ \Z $, sea $ P = \{ \{ n \in \Z : \exists m \in \Z(n = 3m) \}, \{ n \in \Z : \exists m \in \Z(n = 3m+1 \}, \{ n \in \Z : \exists m \in \Z(n = 3m + 2)  \} \}$
-	\item En $  \Z $, sea $ P = \{ \{ n \in \Z :n \leq 0 \}, \{ n \in \Z: n > 1 \} \}  $
-	\item En el conjunto $ A= \{1,2,3,4,5,6 \} $, sea $ P = \{ \{ 1,2\},\{3,4,5,6 \},\{6 \} \} $
-	\item En el conjunto $ A= \{1,2,3,4,5,6 \} $, sea $ P = \{ \{ 1,2\},\{3,4,6 \},\{5 \} \} $
-	\item En $ \R $, sea $ P = \{ \{ x \in \R: x \leq 0 \land x \text{ es irracional } \},\{x \in \R: x \leq 0 \land x \text{ es racional} \},\{x \in \R: x>0 \},\{x \in \R: x \text{ es irracional } \land x \text{ es racional } \}  \} $ 
-	\item En $ \R $ sea $ P = \{  \{ x \in \R: x \leq 0 \land x \text{ es irracional} \},\{ x \in \R : x \leq0 \land x \text{ es racional} \},\{ x \in \R: x > 0 \}  \} $
-\end{itemize}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			|	EJERCICIO 16				%
-%			|	BERE						%	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent16. Demuestre por inducción:
-$$1+2+3+....+ n = \frac{n(n+1)}{2}$$
-Caso base: n=1
-$$1 = \frac{1(1+1)}{2} = \frac{2}{2} = 1$$
-Paso Inductivo: Suponemos que la proposición es cierta para $n=k \in \mathbb{N}.$\\
-H.I:
-$$1+2+3+....+ k = \frac{k(k+1)}{2}$$
-P.D que la proposición es cierta para n=k+1
-$$1+2+3+....+ k + 1 = (1+2+3+...+k) + (k+1)$$
-\begin{align*}
-	&=\frac{k(k+1)}{2}+k+1\\
-	&=\frac{k(k+1)+2(k+1)}{2}\\
-	&=\frac{(k+1)(k+2)}{2}\\
-	&=\frac{k+1[(k+1)+1]}{2}
-\end{align*}
-
-\begin{center}
-$\therefore$ Se cumple  $\forall{n} \in \mathbb{N}$
-\end{center}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			|	EJERCICIO 17				%
-%			|	BERE						%	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent17. Demuestre por inducción:
-$$1^2+2^2+....+n^2=\frac{n(n+1)(2n+1)}{6}$$
-Caso base: n=1
-$$1^2=\frac{1(1+1)(2(1)+1)}{6}=\frac{1(2)(3)}{6}=\frac{6}{6}=1$$
-Paso Inductivo: Suponemos que la fórmula es válida para $n=k \in \mathbb{N}.$\\
-H.I:$$1^2+2^2+...+k^2=\frac{k(k+1)(2k+1)}{6}$$
-P.D. que la proposición es cierta para n=k+1
-$$ 1^2+2^2+...+k+1^2=(1^2+2^2+...+k^2)+(k+1)^2  $$
-\begin{align*}
-	&=\frac{k(k+1)(2k+1)}{6}+(k+1)^2\\
-	&=\frac{k(k+1)(2k+1)+6(k+1)^2}{6}\\
-	&=\frac{(k+1)[k(2k+1)+6(k+1)]}{6}\\
-	&=\frac{(k+1)(2k^2+7k+6)}{6}\\
-	&=\frac{(k+1)(k+2)(2k+3)}{6}\\
-	&=\frac{(k+1)[(k+1)+1][2(k+1)+1]}{6}
-\end{align*}
-\begin{center}
-	$\therefore$ Se  cumple $\forall{n} \in \mathbb{N}$	
-\end{center}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			|	EJERCICIO 18				%
-%			|	BERE						%	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent18. Encuentre una fórmula para la siguiente suma, luego 
-demuestre dicha fórmula por inducción:
-$$1+3+5+7+....+2n-1$$
-Fórmula: La suma de n primeros números impares consecutivos es $n^2$, es decir:\\
-$$1+3+5+7+....+2n-1=n^2$$
-Caso base: (Abarcaremos un par de casos)\\
-a) n=1\\
-$2(1)-1=1^2$ (Primer número de impar)\\
-$1=1$\\
-b) n=2\\
-$1+2(2)-1=2^2$ (Se suma el primer número consecutivo, por eso el resultado es 4)\\
-$4=4$\\
-Paso Inductivo: Suponemos que la fórmula es válida para $n=k \in \mathbb{N}.$\\
-H.I 
-$$1+3+5+7+....+2k-1=k^2$$
-P.D. Suponemos que la fórmula es válida para $n=k \in \mathbb{N}.$\\
-\begin{align*}
-	1+3+5+7+....+2(k-1)+(2(k+1)-1)&=(k+1)^2\\
-	1+3+5+7+....+2(k-1)+(2(k+1)-1)&=k^2+(2(k+1)-1)\\
-	&=k^2+2k+2-1\\
-	&=k^2+2k+1\\
-	&=(k+1)^2\\
-\end{align*}
-\begin{center}
-	$\therefore$ Se cumple $\forall{n} \in \mathbb{N}$\\
-\end{center}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			|	EJERCICIO 19				%
-%			|	BERE						%	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent19.	Mismas instrucciones que antes para:
-$$1^2+3^2+5^2+....+(2n-1)^2$$
-Fórmula:
-$$1^2+3^2+5^2+....+(2n-1)^2 = \frac{n(2n-1)(2n+1)}{3}$$
-Caso base: n=1
-\begin{align*}
-	(2(1)-1)^2&=\frac{1(2(1)-1)(2(1)+1)}{3}\\
-	1&=\frac{1(1)(3)}{3}\\
-	1&=1
-\end{align*}
-Paso Inductivo: Suponemos que la fórmula es válida para $n=k \in \mathbb{N}.$\\
-H.I
-$$1^2+3^2+5^2+....+(2k-1)^2 = \frac{k(2k-1)(2k+1)}{3}$$
-P.D que la proposición es cierta para n=k+1
-$$1^2+3^2+5^2+....+(2k-1)^2+(2k+1)^2= \frac{k(2k-1)(2k+1)}{3}+(2k+1)^2$$
-Podemos ver que hay un factor común en ambos términos $((2k+1) y (2k+1)^2)$, así que lo extraemos
-\begin{align*}
-	&=(2k+1)[\frac{k(2k-1)}{3}+2k+1]\\
-	&=(2k+1)[\frac{k(2k-1)+3(2k+1)}{3}]\\
-	&=(2k+1)[\frac{2k^2-k+6k+3}{3}]\\
-	&=(2k+1)[\frac{2k^2+5k+3}{3}]\\
-\end{align*}
-Factorizamos el trinomio
-$$=\frac{(2k+1)(2k+3)(k+1)}{3}$$
-\begin{center}
-	$\therefore$ Se cumple $\forall{n} \in \mathbb{N}$\\
-\end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %			|	EJERCICIO 20				%
-%			|	BERE						%	
+%			|	Ariel						%	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent20. Demuestre por inducción:
 $$1+r+r^2+r^3+...+r^n=\frac{1-r^{n+1}}{1-r}$$
-Caso base: n=1\\
-El primer sumando del primer miembro es 1 el último es $r^1$, así tenemos\\
+\begin{flushright}
+	\textbf{Caso base} 
+\end{flushright}
+$ n=1 $, El primer sumando del primer miembro es 1 el último es $r^1$, así tenemos\\
 $$1+r$$ 
-El segundo miembro queda $$\frac{1-r^2}{1-r}=\frac{(1+r)(1-r)}{1-r}$$
+El segundo miembro de la igualdad, queda $$\frac{1-r^2}{1-r}=\frac{(1+r)(1-r)}{1-r}$$
 entonces $$1+r=1+r$$ 
-Se cumple para $n=1$\\
+\begin{center}
+	$ \therefore $  Se cumple para $n=1$
+\end{center}
 
-Paso Inductivo: Suponemos que la fórmula es válida para $n=k \in \mathbb{N}.$\\
-H.I
-$$1+r+r^2+r^3+...+r^k=\frac{1-r^{k+1}}{1-r}$$
-P.D. que la proposición es cierta para n=k+1
+\begin{flushright}
+	\textbf{Hipótesis de inducción}
+\end{flushright}
+Suponemos que la proposición es válida para $n \in \mathbb{N}.$\\
+$$1+r+r^2+r^3+...+r^n=\frac{1-r^{n+1}}{1-r}$$
+\begin{flushright}
+\textbf{Paso inductivo}
+\end{flushright}
+P.d. Se cumple para $ n=n+1 $
 \begin{align*}
-	1+r+r^2+r^3+...+r^k+r^{k+1}&=\frac{1-r^{k+1}}{1-r}+r^{k+1}...Por H.I\\
-	&=\frac{1-r^{k+1}+r^{k+1}-r^{k+2}}{1-r}\\
-	&=\frac{1-r^{(k+1)+1}}{1-r}\\
+	1+r+r^2+r^3+...+r^n+r^{n+1}&=\frac{1-r^{n+1}}{1-r}+r^{n+1}...&& \text{Por hipótesis de inducción}\\
+	&=\frac{1-r^{n+1}+r^{n+1}-r^{n+2}}{1-r} &&\text{Operando suma de fracciones}\\
+	&=\frac{1-r^{(n+1)+1}}{1-r} && \text{Reduciendo términos}\\
 \end{align*}
 \begin{center}
 	$\therefore$ Se  cumple  $\forall{n} \in \mathbb{N}$\\
 \end{center}
 
-\noindent21.Pruebe que:
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			|	EJERCICIO 23				%
+%			|	EJERCICIO 24				%
 %			|	ARIEL						%	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent23. Dado $ A \subseteq \N $, decimos que $ x \in A $ es el máximo de $ A $ si para todo $ y \in A $, se cumple $ y \leq x $. Demuestree que todo subconjunto finito de números naturales tiene máximo usando inducción sobre la cardinalidad del conjunto.
+\noindent Dado $ A \subseteq \N $, decimos que $ x \in A $ es el máximo de $ A $ si para todo $ y \in A $, se cumple $ y \leq x $. Demuestree que todo subconjunto finito de números naturales tiene máximo usando inducción sobre la cardinalidad del conjunto.
+
+\noindent24. Usando el ejercicio anterior, demuestre que $ \N $ no es finito.
 
 \end{document}
